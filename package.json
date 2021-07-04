@@ -1,0 +1,37 @@
+{
+  "name": "vue-cli-plugin-split-vendors",
+  "description": "SplitVendors Plugin for Vue CLI 4/5",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Jacek Karczmarczyk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacekkarczmarczyk/vue-cli-plugin-split-vendors/issues"
+  },
+  "homepage": "https://github.com/jacekkarczmarczyk/vue-cli-plugin-split-vendors#readme",
+  "scripts": {
+    "lint": "eslint -c index.js *.js",
+    "release": "git checkout dev && git reset && git diff --name-status --exit-code HEAD && yarn lint && cz-update-version && conventional-changelog -p angular -i CHANGELOG.md -s && git add . && cz-commit --push --push-tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacekkarczmarczyk/vue-cli-plugin-split-vendors.git"
+  },
+  "keywords": [
+    "vue-cli",
+    "vue-cli plugin",
+    "vendors",
+    "webpack"
+  ],
+  "devDependencies": {
+    "conventional-changelog-cli": "^2.0.34",
+    "cz-deploy": "^1.0.0-rc.1",
+    "eslint": "^7.27.0",
+    "eslint-config-standard": "^16.0.3"
+  },
+  "dependencies": {
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0"
+  }
+}
